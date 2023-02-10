@@ -6,17 +6,30 @@
         <link rel="stylesheet" href="1-2.css">
     </head>
     <body>
-        <div class="alert-box" id="alert">알림창임 
+        <div class="alert-box" id="alert">
+            <p id="alert-box">알림창임</p> 
             <button onclick="none()">닫기</button>
         </div>
-        <button onclick="block()">버튼</button> 
+        <button onclick="identify()">버튼1</button> 
+        <button onclick="pw()">버튼2</button> 
         <script>
-            function block(hole){
-                document.getElementById('alert').style.display = hole;
-            }
-            function none(){
+
+                function none(){
                 document.getElementById('alert').style.display = 'none';
-            }
+                }
+                //버튼1 누르면 : 아이디 입력하세요
+                //버튼2 누르면 : 비번 입력하세요
+                function identify(){
+                    document.getElementById('alert-box').innerHTML = '아이디 입력하세요';
+                    document.getElementById('alert').style.display = 'block';
+                }
+                
+                function pw(){
+                    document.getElementById('alert-box').innerHTML = '비번 입력하세요';
+                    document.getElementById('alert').style.display = 'block';
+                }
+
+
         </script> 
     </body>
 </html>
