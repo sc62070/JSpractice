@@ -14,10 +14,18 @@
         <button onclick="pw()">버튼2</button> 
         <script>
 
-
-                document.getElementById('close').addEventListener('click', function(){
-                    document.getElementById('alert').style.display = 'none';
+                //Id 랑 class 로 찾는게 흔하다.
+                //addEventListner('event명') 는 onclick 대신에 사용해볼수 있다. **감시자 역할
+                //event명 예시 = keydown, scroll, click, mouseover.....
+                //function(){} <---- 콜백함수, 코드를 순차적으로 실행할때 가끔 보임
+                document.getElementById('close').addEventListener('mouseover', function(){
+                document.getElementById('alert').style.display = 'none';
                 });
+
+
+
+
+
 
                 function none(){
                 document.getElementById('alert').style.display = 'none';
@@ -33,7 +41,7 @@
                     document.getElementById('alert-box').innerHTML = '비번 입력하세요';
                     document.getElementById('alert').style.display = 'block';
                 }
-
+                
 
         </script> 
     </body>
