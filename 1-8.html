@@ -12,20 +12,22 @@
 
 
 
-    <div class="black-bg show-modal">
+    <div class="black-bg">
         <div class="white-bg">
             <h4>로그인하세요</h4>
             <button class="btn btn-danger" id="close">닫기</button>
         </div>
     </div>
 
-      <script>
-        //document.querySelectorAll('.hello).innerHTML('바보');
-        $('.hello').html('바보')
-        $('.hello').css('color','red')
+    <button id="login">로그인</button>
 
-        $('#test-btn').on('click', function(){
-            $('.hello').slideUp();
+      <script>
+        //로그인버튼 누르면 show-modal 클래스를 저기 붙여주셈
+        $('#login').on('click', function(){
+           $('.black-bg').addClass('show-modal');
+        })
+        $('#close').on('click', function(){
+           $('.black-bg').addClass('bye');
         })
 
       </script>
